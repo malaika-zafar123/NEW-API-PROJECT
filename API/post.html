@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post Detail</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <img id="detailImage" alt="Post Image" />
+    <h2 id="detailTitle"></h2>
+    <p id="detailContent"></p>
+
+    <button id="backBtn"> Back to Posts</button>
+  </div>
+
+  <script>
+    const card = JSON.parse(localStorage.getItem("selectedCard"));
+    if (card) {
+      document.getElementById("detailTitle").textContent = card.title;
+      document.getElementById("detailContent").textContent = card.content;
+      document.getElementById("detailImage").src = card.img;
+    } else {
+      document.body.innerHTML = "<h2>No post data found.</h2>";
+    }
+
+    document.getElementById("backBtn").addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
