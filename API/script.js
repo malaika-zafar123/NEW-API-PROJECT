@@ -11,7 +11,7 @@ fetch('card.js')
       card.innerHTML = `
         <img src="${post.img}" alt="${post.title}" class="card-img" />
         <div class="card-content">
-          <h3>${post.title}</h3>
+          <h3 >${post.title}</h3>
           <p>${post.content.substring(0, 100)}...</p>
         </div>
       `;
@@ -24,3 +24,14 @@ fetch('card.js')
       container.appendChild(card);
     });
   });
+
+  // function showModal(){
+  //   const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+  //   modal.show();
+  // }
+
+  function showModal() {
+    const modalElement = document.getElementById('exampleModal');
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();
+  }
