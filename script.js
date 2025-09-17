@@ -25,11 +25,6 @@ fetch('card.js')
     });
   });
 
-  // function showModal(){
-  //   const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
-  //   modal.show();
-  // }
-
   function showModal() {
     const modalElement = document.getElementById('exampleModal');
     const modal = new bootstrap.Modal(modalElement);
