@@ -1,5 +1,5 @@
 
-fetch('card.js')
+fetch('scriptcard.js')
   .then(response => response.json())
   .then(data => {
     const container = document.getElementById("card");
